@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <button onclick="changePage()">My Button</button>
+</body>
+<script>
+    var data = {
+        "name": "Pikachu",
+        "age": 102,
+        "money": "$1",
+        "locations": [
+            {
+                "name": "London",
+                "latitude": "0.1276° W",
+                "longitude": "51.5072° N"
+            },
+            {
+                "name": "New York",
+                "latitude": "40.7128° N",
+                "longitude": "74.0060° W"
+            }]
+    }
+    const myLocation = JSON.stringify(data.locations);
+    const createCookie = () => document.cookie = myLocation; 
+    const changePage = () => {
+        createCookie();
+        window.location.href="./displayLocations.html";
+    }
+</script>
+</html>
