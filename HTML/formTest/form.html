@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Form</title>
 </head>
+
 <body>
-    
+    <form id="myForm" action="./formPage2.html">
+        <label for="u_name">Username:</label>
+        <input type="text" placeholder="username" id="uName" type="u_name">
+        <label for="p_word">Password:</label>
+        <input type="password" placeholder="password" id="pWord" type="p_name"><br>
+        <input id="submit" type="submit" style="margin-left: auto" onclick="storeData(myForm)">
+    </form>
+    <script>
+        const setCookie = (name, value) => {
+            document.cookie = name + "=" + escape(value) + ";";
+            let myCookie = document.cookie;
+            alert(myCookie);
+        }
+
+        const storeData = form => {
+            setCookie("uName", form.uName.value);
+            setCookie("pWord", form.pWord.value);
+            return true;
+        }
+    </script>
 </body>
+
 </html>
