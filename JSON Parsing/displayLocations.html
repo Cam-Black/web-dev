@@ -14,12 +14,12 @@
 <script>
     let myCookie = decodeURIComponent(document.cookie);
 
-    const prettyMyJSON = jsonData => {
-        let myObj = JSON.parse(jsonData);
-        myObj.split(",");
-        console.log(myCookie);
-    }
-    prettyMyJSON(myCookie);
+    // const prettyMyJSON = jsonData => {
+    //     let myObj = JSON.parse(jsonData);
+    //     myObj.split(",");
+    //     console.log(myCookie);
+    // }
+    // prettyMyJSON(myCookie);
     console.log(myCookie);
     document.getElementById("locations").innerHTML = myCookie;
 </script>
