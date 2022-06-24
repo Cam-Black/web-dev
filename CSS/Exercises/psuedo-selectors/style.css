@@ -1,0 +1,28 @@
+p::first-line {
+    color: blue;
+}
+
+p::first-letter {
+    color: red;
+    font-size: xx-large;
+}
+
+p::before {
+    content: "Paragraph ";
+}
+
+p::after {
+    content: " Paragraph End";
+}
+
+p:hover[class = "highlight"]  {
+    background-color: green;
+}
+
+input:active {
+    background-color: lightblue;
+}
+
+input:focus {
+    background-color: lightblue;
+}
