@@ -11,7 +11,7 @@ axios.get("https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings
 		for (let i = 0; i < response.data.length; i++) {
 			const kings = document.createElement('p');
 			kings.innerText = `Name: ${response.data[i].nm}
-                City: ${response.data[i].cty}
+                Country: ${response.data[i].cty}
                 House: ${response.data[i].hse}
                 Years: ${response.data[i].yrs}`;
 			
@@ -20,7 +20,7 @@ axios.get("https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings
 	})
 	.catch(error => console.error(error));
 
-const findByName = event => {
+const findByName = () => {
 	event.preventDefault();
 	while (outputKings.firstChild) {
 		outputKings.removeChild(outputKings.lastChild);
@@ -36,7 +36,7 @@ const findByName = event => {
 			for (let i = 0; i < results.length; i++) {
 				const kings = document.createElement('p');
 				kings.innerText = `Name: ${results[i].nm}
-                City: ${results[i].cty}
+                Country: ${results[i].cty}
                 House: ${results[i].hse}
                 Years: ${results[i].yrs}`;
 				outputKings.appendChild(kings);
@@ -54,5 +54,8 @@ const clearResults = event => {
 	inputKings.value = '';
 }
 
-searchBtn.addEventListener('click', findByName);
+inputKings.addEventListener('input', function(event) {
+	const search = event.target.value;
+	findByName(search);
+});
 reset.addEventListener('click', clearResults);
