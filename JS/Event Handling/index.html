@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conversion</title>
+</head>
+<body>
+	<header>
+		<h1>Event Handling</h1>
+	</header>
+	<main>
+		<label for="numbers">My Number:</label>
+		<input type="number" id="numbers" value="0">
+		<br>
+		<button id="subTen" onclick="changeInput(event)">-10</button>
+		<button id="subFive" onclick="changeInput(event)">-5</button>
+		<button id="reset" onclick="changeInput(event)">Reset</button>
+		<button id="addFive" onclick="changeInput(event)">+5</button>
+		<button id="addTen" onclick="changeInput(event)">+10</button>
+		
+		<div id="output">
+		</div>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>

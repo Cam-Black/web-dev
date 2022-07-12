@@ -10,11 +10,11 @@
 
 <body>
     <form id="myForm" action="./formPage2.html">
-        <label for="u_name">Username:</label>
-        <input type="text" placeholder="username" id="uName" type="u_name">
-        <label for="p_word">Password:</label>
-        <input type="password" placeholder="password" id="pWord" type="p_name"><br>
-        <input id="submit" type="submit" style="margin-left: auto" onclick="storeData(myForm)">
+        <label for="uName">Username:</label>
+        <input type="text" placeholder="username" id="uName">
+        <label for="pWord">Password:</label>
+        <input type="password" placeholder="password" id="pWord"><br>
+        <input id="submit" type="submit" style="margin-left: auto" onclick="storeData('myForm')">
     </form>
     <script>
         const setCookie = (name, value) => {
