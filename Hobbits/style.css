@@ -1,0 +1,13 @@
+.btn {
+    font-size: 15px;
+    padding: 3px;
+}
+
+.btn-danger {
+    border-color: #668585;
+    background-color: #668585;
+}
+
+.btn-danger:hover {
+    background-color: purple;
+}

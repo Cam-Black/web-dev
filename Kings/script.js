@@ -48,9 +48,7 @@ const findByName = () => {
 const clearResults = event => {
 	event.preventDefault();
 	output.style.display = "block";
-	while (outputKings.firstChild) {
-		outputKings.removeChild(outputKings.lastChild);
-	}
+	outputKings.innerHTML = '';
 	inputKings.value = '';
 }
 
